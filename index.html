@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Conway's Game of Life</title>
+    </head>
+
+    <body>
+        <canvas id="gameCanvas" width="1280" height="640"></canvas>
+        <br />
+        <button id="startButton">Start</button>
+        <button id="clearButton">Clear</button>
+
+        <script type="module">
+            import * as application from "./scripts/main.js";
+
+            application.mainLoop(40);
+        </script>
+    </body>
+</html>
