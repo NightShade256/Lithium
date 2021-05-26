@@ -32,8 +32,8 @@ export function mainLoop(scale) {
     // Extremely unpolised implementation to turn on/off
     // cells.
     document.onclick = (mouseEvent) => {
-        let x = Math.floor(mouseEvent.clientX / scale);
-        let y = Math.floor(mouseEvent.clientY / scale);
+        let x = Math.trunc(mouseEvent.clientX / scale);
+        let y = Math.trunc(mouseEvent.clientY / scale);
 
         if (y >= cells.length || x >= cells[0].length) {
             return;
@@ -109,7 +109,7 @@ export function mainLoop(scale) {
                     ctx.fillStyle = "white";
                 }
 
-                rendering.fillCell(ctx, j * scale, i * scale, scale);
+                rendering.fillCell(ctx, j, i, scale);
             }
         }
 

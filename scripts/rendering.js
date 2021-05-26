@@ -9,5 +9,5 @@ export function drawGrid(ctx, w, h, scale) {
 
 // Fill in the cell that corresponds to the given coordinates and scale.
 export function fillCell(ctx, x, y, scale) {
-    ctx.fillRect(Math.trunc(x / scale) * scale, Math.trunc(y / scale) * scale, scale, scale);
+    ctx.fillRect(x * scale, y * scale, scale, scale);
 }
