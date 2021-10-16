@@ -1,17 +1,30 @@
-# cgol.js
+# Lithium
 
-An extremely simple implementation of Conway's Game of Life in HTML + JS.
+A simple implementation of Conway's Game of Life written in Rust, targeting WASM.
 
-## Usage
+## Build Instructions
 
-Start a simple HTTP server in the root directory,
+Lithium requires that you have the `wasm32-unknown-unknown` Rust target, `wasm-bindgen` CLI tool and
+Python 3 (for the `http.server` module) installed.
+
+To build the WASM binary, execute
 
 ```bash
-python -m http.server
+cargo xtask build
 ```
 
-and goto the address `localhost:8000` in your browser.
+To serve the web page, execute
+
+```bash
+cargo xtask serve
+```
+
+To remove the build WASM artifacts, execute
+
+```bash
+cargo xtask clean
+```
 
 ## License
 
-This project is licensed under the Apache-2.0 license.
+Lithium is licensed under the terms of the Apache 2.0 license.

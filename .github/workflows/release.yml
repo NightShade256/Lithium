@@ -1,0 +1,31 @@
+name: Deploy to GH Pages
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Rust with wasm32-unknown-unknown target
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          default: true
+          target: wasm32-unknown-unknown
+
+      - name: Build WASM binary
+        run: |
+          cargo install -f wasm-bindgen-cli
+          cargo xtask build
+          rm .gitignore
+
+      - name: Deploy to GH Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: static

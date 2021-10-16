@@ -1,0 +1,6 @@
+# Editor Configuration
+/.vscode
+
+# Build Artifacts
+/static/pkg
+/target

@@ -1,0 +1,20 @@
+[package]
+name = "lithium"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+js-sys = "0.3.55"
+wasm-bindgen = "0.2.78"
+winit = { version = "0.25.0", features = ["web-sys"] }
+
+[dependencies.web-sys]
+version = "0.3.55"
+features = [
+    "CanvasRenderingContext2d",
+    "Document",
+    "HtmlButtonElement",
+    "HtmlCanvasElement",
+    "HtmlElement",
+    "Window",
+]
