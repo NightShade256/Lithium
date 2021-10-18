@@ -4,8 +4,8 @@ A simple implementation of Conway's Game of Life written in Rust, targeting WASM
 
 ## Build Instructions
 
-Lithium requires that you have the `wasm32-unknown-unknown` Rust target, `wasm-bindgen` CLI tool and
-Python 3 (for the `http.server` module) installed.
+The `wasm32-unknown-unknown` Rust target and the `wasm-bindgen` CLI tool is required to build Lithium from source.
+Python 3 (the `http.server` module to be specific) is required to serve the web page.
 
 To build the WASM binary, execute
 
